@@ -1,5 +1,12 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    List<TestGithub.Models.user> l = TestGithub.Dao.UserDao.getUserById();
+}
+
+@foreach (var item in l)
+{
+    <p>@item.username</p>
+    <p>@item.email</p>
 }
 
 <div class="jumbotron">

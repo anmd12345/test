@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using TestGithub.Models;
 
 namespace TestGithub.Dao
 {
-    public class UserDao
+    public  static class UserDao
     {
-        private ConectionDataContext db = new ConectionDataContext();
+        private static ConnectionDataContext db = new ConnectionDataContext();
 
-        public user getUserById (int id)
+        public static List<user> getUserById ()
         {
-            return db.users.FirstOrDefault(user => user.id == id);
+            return db.users.ToList();
         }
     }
 }
