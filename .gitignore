@@ -1,1 +1,3 @@
-Models/
+Models/*.dbml
+Models/*.layout
+Models/*.cs
